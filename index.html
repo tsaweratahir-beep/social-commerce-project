@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCommerce - Shop Smart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>SmartCommerce</span>
+        </div>
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        </div>
+        <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Discover Products <span>Made For You</span></h1>
+        <p>AI-powered recommendations based on your preferences</p>
+    </div>
+
+    <!-- Categories Section - Ab zyada categories ke liye scrollable -->
+    <div class="categories-wrapper">
+        <div class="categories" id="categories">
+            <button class="cat-btn active" onclick="filterCategory('all')">All</button>
+            <!-- Categories dynamically load hongi yahan -->
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="loadProducts('trending')"><i class="fas fa-fire"></i> Trending</button>
+        <button class="tab" onclick="loadProducts('popular')"><i class="fas fa-chart-line"></i> Popular</button>
+        <button class="tab" onclick="loadProducts('recommended')"><i class="fas fa-star"></i> Recommended For You</button>
+    </div>
+
+    <div class="products" id="products">
+        <div class="loading">Loading products...</div>
+    </div>
+
+    <footer>
+        <p>© 2025 SmartCommerce - AI Powered Recommendation System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
